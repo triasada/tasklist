@@ -58,7 +58,7 @@
                             <a  id= 'user' href="<?= URL ?>user" title="Manage User"><i class="fa fa-users fa-3x"></i></a>
                         </li>
                         <li  >
-                            <a  id= 'news' href="<?= URL ?>news" title="News"><i class="fa fa-file-text fa-3x"></i></a>
+                            <a  id= 'group' href="<?= URL ?>group" title="Group"><i class="fa fa-user-md fa-3x"></i></a>
                         </li>
                         <li  >
                             <a   href="chart.html"><i class="fa fa-bar-chart-o fa-3x"></i> Morris Charts</a>
