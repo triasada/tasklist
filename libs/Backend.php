@@ -22,6 +22,12 @@ class Backend extends Controller{
         $data = $this->model->getCompany();
         $this->view->companyLogo = $data[3]['description'];
         $this->view->companyName = $data[0]['description'];
+        $this->pageId = $this->model->getPage($this->module_name)[0]['id'];
+        $this->view->Navbar = $this->model->getMenu($this->id);
+        if (!$this->model->is_privileged($this->id, $this->pageId)) {
+            session_destroy();
+            header('location:'.URL.'login');
+        }
         
         
     }

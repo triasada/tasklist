@@ -27,8 +27,25 @@
                                 <p class="help-block"></p>
                             </div>
 
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="panel panel-default" >
+                                        <div class="panel-heading" >
+                                            Access
+                                        </div>
+                                        <?php
+                                        foreach ($this->datapage as $value) {
+                                            
+                                            ?>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="role[]" value="<?= $value['id'] ?>"  <?= $check ?> /><?= $value['page'] ?>
+                                                </label>
+                                            </div>
 
-                            
+                                        <?php } ?>
+                                    </div></div></div>
+
                             <button  type="button" class="btn btn-success" onclick="add()" >Submit</button>
                             <button type="reset" class="btn btn-primary">Reset</button>
 

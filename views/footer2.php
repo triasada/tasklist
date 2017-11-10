@@ -10,6 +10,9 @@
         var a= "<?php echo $this->activeMenu?>";
         
        $("#"+a).addClass('active-menu');
+       $('body').find('li').has('ul').children('ul').has('a.active-menu').removeClass('collapse').addClass('collapse in');
+       var b= $('body').find('li').has('ul.collapse.in').addClass('active');
+       console.log(b);
     });
 </script>
 <p style="color:white">&copy; MARS framework v_1.0</p>

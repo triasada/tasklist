@@ -24,32 +24,35 @@
                             <tr>
                                 <th>No</th>
                                 <th>Group</th>
-                               
-                               
-                                 <th>Operation</th>
-                                
+                                <th>Role</th>
+
+                                <th>Operation</th>
+
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $i = 1;
+                            <?php
+                            $i = 1;
                             foreach ($this->data['data'] as $item) {
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?= $i ?></td>
                                     <td><?= $item['groupName'] ?></td>
+                                    <td><?= $item['rolenya'] ?></td>
                                     <td><div class="btn-group">
-											  <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Action <span class="caret"></span></button>
-											  <ul class="dropdown-menu">
-												<li><a href="<?=URL.$this->activeMenu?>/<?=$this->activeMenu?>/edit/<?=$item['id']?>">Edit</a></li>
-                                                                                                
-                                                                                                <li><a href="javascript:void(0)" data-toggle="modal" data-id="<?=$item['id']?>"  data-target="#myModal" class="openModal">Delete</a></li>
-                                                                                                
-                                                                                          </ul>
-											</div></td>
+                                            <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Action <span class="caret"></span></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="<?= URL . $this->activeMenu ?>/<?= $this->activeMenu ?>/edit/<?= $item['id'] ?>">Edit</a></li>
+
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-id="<?= $item['id'] ?>"  data-target="#myModal" class="openModal">Delete</a></li>
+
+                                            </ul>
+                                        </div></td>
 
                                 </tr>
                                 <?php $i++;
-                            } ?>
+                            }
+                            ?>
 
                         </tbody>
                     </table>

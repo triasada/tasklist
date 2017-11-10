@@ -9,8 +9,8 @@
 * Jakarta International Container Terminal (JICT);
 */
 
-class News_Model extends Model {
-    protected $table ='news';
+class Project_Model extends Model {
+    protected $table ='project';
     public function __construct() {
         parent::__construct();
     }

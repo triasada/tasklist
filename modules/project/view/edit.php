@@ -1,10 +1,10 @@
 <?php
 /*
  * mymvc ;
- * add.php ;
+ * edit.php ;
  * Satria Persada <triasada@yahoo.com> ;
  * Nov 9, 2017;
- * 8:17:06 PM;
+ * 6:43:34 PM;
  * Jakarta International Container Terminal (JICT);
  */
 ?>
@@ -21,20 +21,19 @@
                     <div class="col-md-6">
 
                         <form role="form" id="dataForm"  action="<?= URL . $this->activeMenu ?>/<?= $this->activeMenu ?>/save/<?= $this->data['data']['id'] ?>">
-                            <div id="title" class="form-group input-group input-group">
-                                <span class="input-group-addon" style="width: 100px">Judul</span>
-                                <input class="form-control" name='title' value=""/>
+                            <div class="form-group input-group input-group">
+                                <span class="input-group-addon" style="width: 100px">Menu Name</span>
+                                <input class="form-control" name='project' value="<?= $this->data['data']['project'] ?>"/>
                                 <p class="help-block"></p>
                             </div>
-                            <div id="isi" class="form-group input-group input-group">
-                                <span class="input-group-addon" style="width: 100px">Isi</span>
-                                <input class="form-control" name='isi' value=""/>
+                            <div class="form-group input-group input-group">
+                                <span class="input-group-addon" style="width: 100px">Menu Name</span>
+                                <input class="form-control" name='descript' value="<?= $this->data['data']['descript'] ?>"/>
                                 <p class="help-block"></p>
                             </div>
-
-
                             
-                            <button  type="button" class="btn btn-success" onclick="add()" >Submit</button>
+
+                            <button  type="button" class="btn btn-success" onclick="edit()" >Submit</button>
                             <button type="reset" class="btn btn-primary">Reset</button>
 
                         </form>

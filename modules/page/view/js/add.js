@@ -22,8 +22,8 @@ function add() {
     var a =false;
      a= $('#dataForm').validasi({
          role:{
-             title:'required',
-             isi:'required'
+             page:'required',
+             descript:'required'
          }
      });
 //    console.log(a);
@@ -37,7 +37,7 @@ function add() {
         url: $("#dataForm").attr('action'),
         data: data,
         success: function (data) {
-            console.log(home);
+//            console.log(home);
             if (data.success) {
 //                alert('asu');
                 splash('glyphicon glyphicon-ok', 'alert alert-success', data.msg); 

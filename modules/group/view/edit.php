@@ -7,6 +7,7 @@
  * 6:43:34 PM;
  * Jakarta International Container Terminal (JICT);
  */
+$role = explode('|', $this->data['data']['role']);
 ?>
 
 <div class="row">
@@ -26,10 +27,24 @@
                                 <input class="form-control" name='groupName' value="<?= $this->data['data']['groupName'] ?>"/>
                                 <p class="help-block"></p>
                             </div>
-                            
+                            <div class="row">
+                             <div class="col-md-6 col-sm-6">
+                            <div class="panel panel-default" >
+                                <div class="panel-heading" >
+                                    Access
+                                </div>
+                                <?php
+                                foreach ($this->datapage as $value) {
+                                    $check = in_array($value['id'], $role) ? 'checked' : '';
+                                    ?>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="role[]" value="<?= $value['id'] ?>"  <?= $check ?> /><?= $value['page'] ?>
+                                        </label>
+                                    </div>
 
-
-                            
+<?php } ?>
+                            </div></div></div>
                             <button  type="button" class="btn btn-success" onclick="edit()" >Submit</button>
                             <button type="reset" class="btn btn-primary">Reset</button>
 

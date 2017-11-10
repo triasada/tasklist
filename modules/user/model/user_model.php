@@ -24,7 +24,7 @@ class User_Model extends Model {
     }
 
     public function getGroupAll() {
-        return $this->db->select("select * from groupNames ");
+        return $this->db->select("select * from groupStaff ");
     }
 
     public function editUser($data) {

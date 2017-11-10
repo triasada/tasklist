@@ -23,10 +23,9 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Judul</th>
-                                <th>Isi</th>
-                                <th>Created</th>
-                                <th>By</th>
+                                <th>Project Name</th>
+                                <th>Description</th>
+                                
                                  <th>Operation</th>
                                 
                             </tr>
@@ -37,10 +36,8 @@
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?= $i ?></td>
-                                    <td><?= $item['title'] ?></td>
-                                    <td><?= $item['isi'] ?></td>
-                                    <td class="center"><?= $item['created'] ?></td>
-                                    <td class="center"><?= $item['createdby'] ?></td>
+                                    <td><?= $item['project'] ?></td>
+                                    <td><?= $item['descript'] ?></td>
                                     <td><div class="btn-group">
 											  <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Action <span class="caret"></span></button>
 											  <ul class="dropdown-menu">

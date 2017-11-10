@@ -5,7 +5,7 @@
  */
 
 
-$('body').modalLoad('Delete News','delete');
+$('body').modalLoad('Delete Page','delete');
 $(document).on("click", ".openModal", function () {
      var data = $(this).data('id');
      $(".modal-footer .btn-primary").attr('onclick',"del('"+data+"')");

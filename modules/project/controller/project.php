@@ -9,13 +9,11 @@
 * Jakarta International Container Terminal (JICT);
 */
 
-class News extends Backend{
-    protected $module_name='news';
-    protected $_title='Manage News';
+class Project extends Backend{
+    protected $module_name='project';
+    protected $_title='Manage Project';
             function __construct() {
         parent::__construct();
     }
-    
-    
     
 }
