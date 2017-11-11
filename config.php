@@ -9,7 +9,7 @@ define('DB_HOST', 'localhost');
 define('DB_NAME', 'tasklist');
 define('DB_USER', 'root');
 define('DB_PASS', 'root');
-define('BACKEND', URL.'public/backend_template/');
+define('BACKEND_TEMPLATE', URL.'public/backend_template/');
 define('HASH_GENERAL_KEY', 'MixitUp200');
 
 define('HASH_PASSWORD_KEY', 'catsFLYhigh2000miles');

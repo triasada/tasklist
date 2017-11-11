@@ -57,11 +57,14 @@
                                     <?php
                                     switch ($item['statusid']) {
                                         case 0:
+                                            if ($item['createdby'] !== $_SESSION['userid']){
                                             ?>
                                             <td><a id="updateFunc" href="javascript:void(0)" data-toggle="modal" data-id="<?= $item['id'] ?>"  data-task="<?= $item['task'] ?>" data-progress="<?= $item['progress'] ?>"data-statusid="<?= $item['statusid'] ?>"data-target="#baseModal" class="openModal btn btn-primary">Update</a></td>
                                             <?php
+                                            }
                                             break;
                                         case 1:
+                                            if ($item['createdby'] !== $_SESSION['userid']){
                                             ?>
                                             <td><div class="btn-group">
                                                     <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Action <span class="caret"></span></button>
@@ -71,8 +74,10 @@
                                                     </ul>
                                                 </div></td>
                                         <?php
+                                            }
                                             break;
                                         case 2:
+                                            if ($item['createdby'] == $_SESSION['userid']){
                                             ?>
                                             <td><div class="btn-group">
                                                     <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Action <span class="caret"></span></button>
@@ -82,11 +87,14 @@
                                                     </ul>
                                                 </div></td>
                                             <?php
+                                            }
                                             break;
                                         case 3:
+                                            if ($item['createdby'] !== $_SESSION['userid']){
                                             ?>
                                               <td><a id="updateFunc" href="javascript:void(0)" data-toggle="modal" data-id="<?= $item['id'] ?>"  data-task="<?= $item['task'] ?>" data-progress="<?= $item['progress'] ?>"data-statusid="<?= $item['statusid'] ?>"data-target="#baseModal" class="openModal btn btn-primary">Update</a></td>
                                             <?php
+                                            }
                                         break;
                                         case 4:
                                             break;

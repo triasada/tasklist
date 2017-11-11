@@ -78,4 +78,12 @@ class Backend extends Controller{
         echo json_encode(array('success' => $success, 'msg' => $msg));
 //        var_dump($data);
     }
+    function removeElementArray($array, $key, $value){
+     foreach($array as $subKey => $subArray){
+          if($subArray[$key] !== $value){
+               unset($array[$subKey]);
+          }
+     }
+     return $array;
+}
 }

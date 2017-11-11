@@ -14,12 +14,12 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title><?php echo $this->title ?></title>
-        <link href="<?php echo BACKEND; ?>assets/css/bootstrap.css" rel="stylesheet" />
-        <link href="<?php echo BACKEND; ?>assets/css/font-awesome.css" rel="stylesheet" />
-        <link href="<?php echo BACKEND; ?>assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
-        <link href="<?php echo BACKEND; ?>assets/css/custom.css" rel="stylesheet" />
+        <link href="<?php echo BACKEND_TEMPLATE; ?>assets/css/bootstrap.css" rel="stylesheet" />
+        <link href="<?php echo BACKEND_TEMPLATE; ?>assets/css/font-awesome.css" rel="stylesheet" />
+        <link href="<?php echo BACKEND_TEMPLATE; ?>assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+        <link href="<?php echo BACKEND_TEMPLATE; ?>assets/css/custom.css" rel="stylesheet" />
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-        <script src="<?php echo BACKEND; ?>assets/js/jquery-1.10.2.js"></script>
+        <script src="<?php echo BACKEND_TEMPLATE; ?>assets/js/jquery-1.10.2.js"></script>
 
     </head>
     <body>
@@ -37,73 +37,36 @@
                 <div style="color: white;
                      padding: 15px 50px 5px 50px;
                      float: right;
-                     font-size: 16px;"><img height="30px"  src="<?php echo BACKEND; ?>assets/img/find_user.png" class="img-circle" /><?php echo $this->nameuser ?> &nbsp; <a href="<?= URL ?>dashboard/dashboard/logout" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+                     font-size: 16px;"><img height="30px"  src="<?php echo BACKEND_TEMPLATE; ?>assets/img/find_user.png" class="img-circle" /><?php echo $this->nameuser ?> &nbsp; <a href="<?= URL ?>dashboard/dashboard/logout" class="btn btn-danger square-btn-adjust">Logout</a> </div>
             </nav>   
             <!-- /. NAV TOP  -->
             <nav class="navbar-default navbar-side" role="navigation">
                 <div class="sidebar-collapse">
                     <ul class="nav" id="main-menu">
-                        <?php foreach ($this->Navbar as $menu) {
+                        <?php
+                        foreach ($this->Navbar as $menu) {
                             if (isset($menu['child'])) {
                                 ?>
                                 <li>
                                     <a id="<?= $menu['page'] ?>" href="#" title="<?= $menu['descript'] ?>"><i class="fa <?= $menu['pclass'] ?> fa-3x"></i><span class="fa arrow"></span></a>
                                     <ul class="nav nav-second-level">
-                                        <?php foreach ($menu['child'] as $menu2) { 
+                                        <?php foreach ($menu['child'] as $menu2) {
                                             ?>
                                             <li>
                                                 <a id="<?= $menu2['page'] ?>" href="<?= URL . $menu2['page'] ?>" title="<?= $menu2['descript'] ?>"><i class="fa <?= $menu2['pclass'] ?> fa-2x"></i></a>
                                             </li>
-                                          <?php } ?>
+        <?php } ?>
                                     </ul>
                                 </li>
-                                <?php } else{
+                            <?php } else {
                                 ?>
                                 <li>
                                     <a id="<?= $menu['page'] ?>" href="<?= URL . $menu['page'] ?>" title="<?= $menu['descript'] ?>"><i class="fa <?= $menu['pclass'] ?> fa-3x"></i></a>
                                 </li>
-    <?php }
-} ?>
+                            <?php }
+                        }
+                        ?>
 
-                        <li  >
-                            <a   href="chart.html" title="Morris Charts"><i class="fa fa-bar-chart-o fa-3x"></i> </a>
-                        </li>	
-                        <li  >
-                            <a  href="table.html" title="Table Examples"><i class="fa fa-table fa-3x" ></i> </a>
-                        </li>
-
-
-
-                        <li>
-                            <a href="#" title="Dropdown"><i class="fa fa-sitemap fa-3x"></i> <span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="#">Second Level Link</a>
-                                </li>
-                                <li>
-                                    <a href="#">Second Level Link</a>
-                                </li>
-                                <li>
-                                    <a href="#">Second Level Link<span class="fa arrow"></span></a>
-                                    <ul class="nav nav-third-level">
-                                        <li>
-                                            <a href="#">Third Level Link</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Link</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Link</a>
-                                        </li>
-
-                                    </ul>
-
-                                </li>
-                            </ul>
-                        </li>  
-                        <li  >
-                            <a  href="blank.html"><i class="fa fa-square-o fa-3x"></i> Blank Page</a>
-                        </li>	
                     </ul>
 
                 </div>

@@ -1,10 +1,14 @@
 </div>
     <!-- /. PAGE INNER  -->
+    <div id="footer" style="float: right;
+                     font-size: 10px;">
+    <span class="text-right text-primary">&copy;2017 JICT-ICT-DEV -----engine use MARS&reg; framework</span>
+    </div>
 </div>
 <!-- /. PAGE WRAPPER  -->
-<script src="<?php echo BACKEND; ?>assets/js/splash.js"></script>
-<script src="<?php echo BACKEND; ?>assets/js/validate.js"></script>
-<script src="<?php echo BACKEND; ?>assets/js/tablemodif.js"></script>
+<script src="<?php echo BACKEND_TEMPLATE; ?>assets/js/splash.js"></script>
+<script src="<?php echo BACKEND_TEMPLATE; ?>assets/js/validate.js"></script>
+<script src="<?php echo BACKEND_TEMPLATE; ?>assets/js/tablemodif.js"></script>
 <script>
     var home ='<?php echo URL.$this->activeMenu?>/';
     $( document ).ready(function() {
@@ -16,15 +20,15 @@
 //       console.log(b);
     });
 </script>
-<p style="color:white">&copy; MARS framework v_1.0</p>
+
 </div>
 
 
-<script src="<?php echo BACKEND; ?>assets/js/bootstrap.min.js"></script>
-<script src="<?php echo BACKEND; ?>assets/js/jquery.metisMenu.js"></script>
-<script src="<?php echo BACKEND; ?>assets/js/morris/raphael-2.1.0.min.js"></script>
-<script src="<?php echo BACKEND; ?>assets/js/morris/morris.js"></script>
-<script src="<?php echo BACKEND; ?>assets/js/custom.js"></script>
+<script src="<?php echo BACKEND_TEMPLATE; ?>assets/js/bootstrap.min.js"></script>
+<script src="<?php echo BACKEND_TEMPLATE; ?>assets/js/jquery.metisMenu.js"></script>
+<!--<script src="<?php echo BACKEND_TEMPLATE; ?>assets/js/morris/raphael-2.1.0.min.js"></script>-->
+<!--<script src="<?php echo BACKEND_TEMPLATE; ?>assets/js/morris/morris.js"></script>-->
+<script src="<?php echo BACKEND_TEMPLATE; ?>assets/js/custom.js"></script>
 
 <?php 
     if (isset($this->js)) 

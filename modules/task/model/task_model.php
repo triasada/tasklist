@@ -17,7 +17,7 @@ class Task_Model extends Model {
 public function get($id) {
         $customQuery = "";
         if (isset($id)) {
-            $customQuery = " where resource like '%$id%'";
+            $customQuery = " where resource like '%$id%' or createdby = $id ";
         }
         $query1 = "select * from tasklist " . $customQuery ."order by created desc";
         $result1= $this->db->select($query1);

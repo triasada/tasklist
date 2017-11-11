@@ -16,8 +16,6 @@ class Task extends Backend {
 
     function __construct() {
         parent::__construct();
-        $this->loadCustomModel('project', 'project');
-        $this->loadCustomModel('user', 'user');
         $this->loadCustomModel('tasklist', 'tasklist');
     }
 
@@ -31,6 +29,21 @@ class Task extends Backend {
         }
         $result['data'] = $datamentah;
 
+        $this->view->js = array('js/index.js');
+        $this->view->data = $result;
+        $this->view->title = $this->_title;
+        $this->rendering('index');
+    }
+    public function statTask($stat) {
+        $datamentah = $this->model->get($this->id);
+
+        $i = 0;
+        foreach ($datamentah as $value) {
+            $datamentah[$i]['resourcenya'] = $this->tasklist_model->getResource($value['id']);
+            $i++;
+        }
+        $datamateng = $this->removeElementArray($datamentah, 'statusid', $stat);
+        $result['data'] = $datamateng;
         $this->view->js = array('js/index.js');
         $this->view->data = $result;
         $this->view->title = $this->_title;

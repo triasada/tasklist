@@ -19,7 +19,7 @@
             </div>
             <div class="panel-body">
                 <div class="table-responsive">
-                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                    <table class="table table-striped table-bordered table-hover" id="tasktable">
                         <thead>
                             <tr>
                                 <th>Details</th>
@@ -49,12 +49,13 @@
                                     <td><?= $item['projectname'] ?></td>
                                     <td><?= $item['task'] ?></td>
                                     <td><?= $item['resourcenya'] ?></td>
-                                    <td><?= $item['taskstatus'] ?></td>
+                                    <td class="status <?= $item['taskstatus'] ?>"><?= $item['taskstatus'] ?></td>
                                     <td><?= $item['progress'] ?>%</td>
                                     <td><?= $item['created'] ?></td>
                                     <td><?= $item['createdbyname'] ?></td>
                                     <td><?= $item['lastupdate'] ?></td>
                                     <td><?= $item['updatedbyname'] ?></td>
+                                    <?php if($item['statusid']==0){ ?>
                                     <td><div class="btn-group">
                                             <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Action <span class="caret"></span></button>
                                             <ul class="dropdown-menu">
@@ -62,6 +63,7 @@
 
                                             </ul>
                                         </div></td>
+                                    <?php }?>
 
                                 </tr>
                                 <?php $i++;
