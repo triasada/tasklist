@@ -36,7 +36,7 @@
                                 <select class="form-control" name='parent' >
                                     <option value="0" <?= ($this->data['data']['parent']) ? 'selected' : ''; ?>>root</option>
                                     <?php
-                                    foreach ($this->data['parent'] as $group) {
+                                    foreach ($this->parent as $group) {
                                         $selected = ($group['id'] == $this->data['data']['parent']) ? 'selected' : '';
                                         ?>
 

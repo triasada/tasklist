@@ -26,13 +26,15 @@ jQuery.fn.extend({
                 if (elementObj.val() === "") {
                     elemen.error();
 //                    elementObj.error();
-                if (option.message !== undefined){
-                    if (option.message[property] !== undefined) {
-                        elemen.find('.help-block').html(option.message[property]);
+                    if (option.message !== undefined) {
+                        if (option.message[property] !== undefined) {
+                            elemen.find('.help-block').html(option.message[property]);
+                        } else {
+                            elemen.find('.help-block').html('required');
+                        }
                     } else {
                         elemen.find('.help-block').html('required');
                     }
-                }else{elemen.find('.help-block').html('required');}
 
                 } else if (option.minLength !== undefined) {
                     if (elementObj.val().length < option.minLength[property]) {
@@ -56,13 +58,13 @@ jQuery.fn.extend({
     success: function () {
         return this.addClass('has-success');
     },
-    modalLoad:function (title,classmodal){
-        var dialog = "<div class='modal fade "+classmodal+" ' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'><\n\
+    modalLoad: function (title, classmodal) {
+        var dialog = "<div class='modal fade " + classmodal + " ' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'><\n\
                     div class='modal-dialog'>\n\
                     <div class='modal-content'>\n\
                                         <div class='modal-header'>\n\
                                             <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>\n\
-                                            <h4 class='modal-title' id='myModalLabel'>"+title+"</h4>\n\
+                                            <h4 class='modal-title' id='myModalLabel'>" + title + "</h4>\n\
                                         </div>\n\
                                         <div class='modal-body'>\n\
                                            \n\
@@ -75,6 +77,24 @@ jQuery.fn.extend({
                                 </div>\n\
                             </div>";
         return $(this).append(dialog);
-    
-}
+
+    },
+    modalBaseLoad: function () {
+        var dialog = "<div class='modal fade ' id='baseModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>\n\
+\n\<div class='modal-content'>\n\
+                                        <div class='modal-header'>\n\
+                                            <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>\n\
+                                            <h4 class='modal-title' id='baseModalLabel'></h4>\n\
+                                        </div>\n\
+                                        <div class='modal-body'>\n\
+                                           \n\
+                                        </div>\n\
+                                        <div class='modal-footer'>\n\
+                                            <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>\n\
+                                        </div>\n\
+                                    </div>\n\
+                            </div>";
+        return $(this).append(dialog);
+
+    }
 });

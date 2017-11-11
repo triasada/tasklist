@@ -42,4 +42,29 @@ class User_Model extends Model {
         return $result[0];
         
     }
+    public function getBelow($data) {
+        $user = $this->db->select("select groupid from users where id= $data ");
+        
+        $group = $this->db->select("select id,parent from groupstaff where parent = ".$user[0]['groupid']);
+        foreach ($group as $value) {
+            
+            $groupchild = $this->db->select("select id,parent from groupstaff where parent = ".$value['id']);
+            foreach ($groupchild as $valuegc) {
+                array_push($group, $valuegc);
+                
+            }
+        }
+        
+        $result= [];
+        foreach ($group as  $value) {
+            $datauser = $this->db->select("select * from user where groupid =". $value['id']);
+           foreach ($datauser as $valueDu) {
+                array_push($result, $valueDu);
+                
+            }
+        }
+//        var_dump($result);exit();
+        return $result;
+        
+    }
 }

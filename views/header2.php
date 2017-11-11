@@ -14,15 +14,10 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title><?php echo $this->title ?></title>
-        <!-- BOOTSTRAP STYLES-->
         <link href="<?php echo BACKEND; ?>assets/css/bootstrap.css" rel="stylesheet" />
-        <!-- FONTAWESOME STYLES-->
         <link href="<?php echo BACKEND; ?>assets/css/font-awesome.css" rel="stylesheet" />
-        <!-- MORRIS CHART STYLES-->
         <link href="<?php echo BACKEND; ?>assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
-        <!-- CUSTOM STYLES-->
         <link href="<?php echo BACKEND; ?>assets/css/custom.css" rel="stylesheet" />
-        <!-- GOOGLE FONTS-->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
         <script src="<?php echo BACKEND; ?>assets/js/jquery-1.10.2.js"></script>
 
@@ -57,7 +52,7 @@
                                         <?php foreach ($menu['child'] as $menu2) { 
                                             ?>
                                             <li>
-                                                <a id="<?= $menu2['page'] ?>" href="<?= URL . $menu2['page'] ?>" title="<?= $menu2['descript'] ?>"><i class="fa <?= $menu['pclass'] ?> fa-2x"></i></a>
+                                                <a id="<?= $menu2['page'] ?>" href="<?= URL . $menu2['page'] ?>" title="<?= $menu2['descript'] ?>"><i class="fa <?= $menu2['pclass'] ?> fa-2x"></i></a>
                                             </li>
                                           <?php } ?>
                                     </ul>
