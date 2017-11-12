@@ -38,7 +38,7 @@ class Dashboard extends Backend {
 
     function logout() {
         Session::destroy();
-        header('location: ' . URL . 'login');
+        header('location: ' . URL );
         exit;
     }
 
