@@ -16,16 +16,7 @@
             if (data.success) {
                 new Morris.Donut({
                     element: 'morris-donut-chart',
-                    data: [{
-                    label: "Done",
-                    value: data.data.GbossDone
-                }, {
-                    label: "OnGoing",
-                    value: data.data.GbossProc
-                }, {
-                    label: "New",
-                    value: data.data.GbossNew
-                }],
+                    data: data.data,
                 resize: true
                 });
                
@@ -35,7 +26,7 @@
         },
         dataType: 'JSON'
     });
-
+   
     });
 </script>
 </body>

@@ -19,31 +19,33 @@ video {
 .stopfade { 
    opacity: .5;
 }
-#header { 
+#bawah { 
   font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
-  font-weight:100; 
-  background: rgba(255,255,255,0.5);
+  font-weight:100;
+  /*background: rgba(255,255,255,0.5);*/
   color: white;
  padding: 2rem;
-  width: 100%;
-  height: 100px;
- 
+  width: auto;
+  height: 80px;
+ position: fixed;
   font-size: 1.2rem;
-  z-index: 1;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
 }
 #polina { 
   font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
   font-weight:100; 
   background: rgba(255,255,255,0.5);
   color: white;
- 
   width: 30%;
-  height: 100%;
+  min-height: 40%;
   padding: 2rem;
   right: 0;
+  top: 50%;
+   transform: translate(0, -50%);
   position: fixed;
   font-size: 1.2rem;
-  top: 0;
   z-index: 2;
   
 }
