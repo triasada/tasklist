@@ -5092,8 +5092,7 @@ button.close {
   left: 0;
   z-index: 1050;
   display: none;
-  overflow: auto;
-  overflow-y: scroll;
+  
   -webkit-overflow-scrolling: touch;
   outline: 0;
 }
@@ -5118,7 +5117,7 @@ button.close {
   transform: translate(-50%, -50%);
   z-index: 1050;
   display: none;
-  overflow: auto;
+/*  overflow: auto;*/
   /*overflow-y: scroll;*/
   -webkit-overflow-scrolling: touch;
   outline: 0;
@@ -5198,6 +5197,10 @@ button.close {
 .modal-body {
   position: relative;
   padding: 20px;
+  height: 250px;
+  overflow-y: auto;
+  overflow: auto;
+  
 }
 .modal-footer {
   padding: 19px 20px 20px;

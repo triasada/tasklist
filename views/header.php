@@ -11,7 +11,7 @@
         <script src="<?php echo BACKEND_TEMPLATE; ?>assets/js/jquery-1.10.2.js"></script>
     <script type="text/javascript" src="<?php echo URL; ?>public/js/custom.js"></script>
 </head>
-<body>
+<body class="front-end">
 
 <?php Session::init(); ?>
 

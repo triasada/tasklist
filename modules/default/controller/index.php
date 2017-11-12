@@ -11,6 +11,7 @@ class Index extends Controller {
         
         $this->view->title = 'Home';
         $this->view->render('header');
+         $this->view->js = array('js/depan.js');
         $this->view->renderModule('default','index');
         $this->view->render('footer');
     }

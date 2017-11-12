@@ -31,21 +31,6 @@ $(document).on("click", "#updateFunc", function () {
 
 });
 
-function showHistory(data) {
-    $('#baseModal').addClass('history');
-    var modal = $('#baseModal .modal-body');
-    modal.empty();
-    modal.append("<table class='table table-striped table-bordered table-hover'></table>");
-    modal.has('table').children('table').append('<thead></thead>').append('<tbody></tbody>');
-    var thead = modal.has('table').children('table').has('thead').children('thead');
-    var tbody = modal.has('table').children('table').has('tbody').children('tbody');
-    thead.append(' <tr><th>Task</th><th>Status</th><th>Progress</th><th>Notes</th><th>Created</th><th>By</th> </tr>');
-    var i;
-    for (i = 0; i < data.length; i++) {
-        tbody.append('<tr><td>' + data[i].task + '</td><td>' + data[i].taskstatus + '</td><td>' + data[i].progress + '</td><td>' + data[i].notes + '</td><td>' + data[i].created + '</td><td>' + data[i].createdby + '</td></tr>');
-    }
-    $('#baseModalLabel').html('History Of Task ' + data[0].task);
-}
 
 function updateHistory(data) {
     var statustask;
