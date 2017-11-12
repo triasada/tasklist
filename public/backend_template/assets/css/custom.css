@@ -1,17 +1,4 @@
 
-/*=============================================================
-    Authour URI: www.binarycart.com
-    License: Commons Attribution 3.0
-
-    http://creativecommons.org/licenses/by/3.0/
-
-    100% To use For Personal And Commercial Use.
-    IN EXCHANGE JUST GIVE US CREDITS AND TELL YOUR FRIENDS ABOUT US
-   
-    ========================================================  */
-/*==============================================
-    GENERAL  STYLES    
-    =============================================*/
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -402,6 +389,7 @@ li.selected{
 }
 .navbar-header {
     background: #A70303;
+    border-top-left-radius: 10px;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
     background-color: #B40101;
@@ -451,7 +439,8 @@ li.selected{
     }
 
     .navbar {
-        border-radius: 0px; 
+        border-top-left-radius:  10px;
+        border-top-right-radius: 10px;
     }
 
 }

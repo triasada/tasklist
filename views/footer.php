@@ -17,6 +17,7 @@
                 new Morris.Donut({
                     element: 'morris-donut-chart',
                     data: data.data,
+                     labelColor: '#fff',
                 resize: true
                 });
                
@@ -26,6 +27,9 @@
         },
         dataType: 'JSON'
     });
+//    setTimeout(function() {
+  $('#morris').fadeIn(8000);
+//}, 2000);   
    
     });
 </script>

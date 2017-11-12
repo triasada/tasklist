@@ -2,7 +2,7 @@
     <!-- /. PAGE INNER  -->
     <div id="footer" style="float: right;
                      font-size: 10px;">
-    <span class="text-right text-primary">&copy;2017 JICT-ICT-DEV -----engine use MARS&reg; framework</span>
+    <span class="text-right text-primary">&copy;2017 JICT-ICT-DEV | MARS&reg; engine |Admin Template by binary Chart</span>
     </div>
 </div>
 <!-- /. PAGE WRAPPER  -->

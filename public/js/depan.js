@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 $("#atas").fadeIn(3000);
-
 $('body').modalBaseLoad();
 $(document).on("click", "#loginFunc", function () {
     

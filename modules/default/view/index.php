@@ -21,9 +21,9 @@
 
 <div id="polina">
     
-
+    <br><br><br>
     <div class="row"> 
-        <div class="panel-body">
+        <div class="panel-body" id="morris" style="display: none;">
             <h1 class="text-center  text-front-end" style="font-weight:bolder">ICT-TASK</h1>
             <div id="morris-donut-chart"></div>
         </div>

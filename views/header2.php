@@ -32,16 +32,28 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?=URL?>"><?php echo $this->companyLogo ?></a> 
+                    <a class="navbar-brand" href="<?= URL ?>"><?php echo $this->companyLogo ?></a> 
                 </div>
                 <div style="color: white;
                      padding: 15px 50px 5px 50px;
                      float: right;
-                     font-size: 16px;"><img height="30px"  src="<?php echo BACKEND_TEMPLATE; ?>assets/img/find_user.png" class="img-circle" /><?php echo $this->nameuser ?> &nbsp; <a href="<?= URL ?>dashboard/dashboard/logout" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+                     font-size: 16px;"><div class="btn-group">
+											  <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><img height="20px"  src="<?php echo BACKEND_TEMPLATE; ?>assets/img/find_user.png" class="img-circle" />
+                                                                                              <?php echo $this->nameuser ?> <span class="caret"></span></button>
+											  <ul class="dropdown-menu dropdown-menu-right">
+												<li><a href="<?=URL?>/user/user/edit/<?=$_SESSION['userid']?>">Profile</a></li>
+                                                                                                <li><a href="javascript:void(0)" onclick="alert ('belum kelar!!!')">Change Password</a></li>
+												<li class="divider"></li>
+                                                                                                <li><a href="javascript:void(0)" onclick="if(confirm('Sure go Out?')){ window.location.href='<?= URL ?>dashboard/dashboard/logout'}">Logout</a></li>
+											  </ul>
+											</div> </div>
             </nav>   
             <!-- /. NAV TOP  -->
             <nav class="navbar-default navbar-side" role="navigation">
                 <div class="sidebar-collapse">
+                    <li>
+
+                    </li>
                     <ul class="nav" id="main-menu">
                         <?php
                         foreach ($this->Navbar as $menu) {
@@ -55,7 +67,7 @@
                                             <li>
                                                 <a id="<?= $menu2['page'] ?>" href="<?= URL . $menu2['page'] ?>" title="<?= $menu2['descript'] ?>"><i class="fa <?= $menu2['pclass'] ?> fa-1x"></i></a>
                                             </li>
-        <?php } ?>
+                                        <?php } ?>
                                     </ul>
                                 </li>
                             <?php } else {
@@ -63,7 +75,8 @@
                                 <li>
                                     <a id="<?= $menu['page'] ?>" href="<?= URL . $menu['page'] ?>" title="<?= $menu['descript'] ?>"><i class="fa <?= $menu['pclass'] ?> fa-2x"></i></a>
                                 </li>
-                            <?php }
+                            <?php
+                            }
                         }
                         ?>
 
