@@ -48,12 +48,12 @@
                             if (isset($menu['child'])) {
                                 ?>
                                 <li>
-                                    <a id="<?= $menu['page'] ?>" href="#" title="<?= $menu['descript'] ?>"><i class="fa <?= $menu['pclass'] ?> fa-3x"></i><span class="fa arrow"></span></a>
+                                    <a id="<?= $menu['page'] ?>" href="#" title="<?= $menu['descript'] ?>"><i class="fa <?= $menu['pclass'] ?> fa-2x"></i><span class="fa arrow"></span></a>
                                     <ul class="nav nav-second-level">
                                         <?php foreach ($menu['child'] as $menu2) {
                                             ?>
                                             <li>
-                                                <a id="<?= $menu2['page'] ?>" href="<?= URL . $menu2['page'] ?>" title="<?= $menu2['descript'] ?>"><i class="fa <?= $menu2['pclass'] ?> fa-2x"></i></a>
+                                                <a id="<?= $menu2['page'] ?>" href="<?= URL . $menu2['page'] ?>" title="<?= $menu2['descript'] ?>"><i class="fa <?= $menu2['pclass'] ?> fa-1x"></i></a>
                                             </li>
         <?php } ?>
                                     </ul>
@@ -61,7 +61,7 @@
                             <?php } else {
                                 ?>
                                 <li>
-                                    <a id="<?= $menu['page'] ?>" href="<?= URL . $menu['page'] ?>" title="<?= $menu['descript'] ?>"><i class="fa <?= $menu['pclass'] ?> fa-3x"></i></a>
+                                    <a id="<?= $menu['page'] ?>" href="<?= URL . $menu['page'] ?>" title="<?= $menu['descript'] ?>"><i class="fa <?= $menu['pclass'] ?> fa-2x"></i></a>
                                 </li>
                             <?php }
                         }

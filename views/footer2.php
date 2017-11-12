@@ -16,8 +16,10 @@
         
        $("#"+a).addClass('active-menu');
        $('body').find('li').has('ul').children('ul').has('a.active-menu').removeClass('collapse').addClass('collapse in');
-       var b= $('body').find('li').has('ul.collapse.in').addClass('active');
-//       console.log(b);
+       $('body').find('li').has('ul.collapse.in').addClass('active');
+       var b=$('li').has('a.active-menu').removeClass('selected').addClass('selected');
+        $('li').has('ul').removeClass('selected');
+    console.log(b);
     });
 </script>
 
