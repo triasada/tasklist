@@ -37,5 +37,13 @@ class Controller {
         $objname=strtolower($modelName);
         $this->$objname = new $modelName();
     }
+    function removeElementArray($array, $key, $value){
+     foreach($array as $subKey => $subArray){
+          if($subArray[$key] !== $value){
+               unset($array[$subKey]);
+          }
+     }
+     return $array;
+}
 
 }
