@@ -29,6 +29,7 @@
     });
 //    setTimeout(function() {
   $('#morris').fadeIn(8000);
+  $('.main_chart_ict').fadeIn(8000);
 //}, 2000);   
    
     });
