@@ -70,7 +70,7 @@
                                                     <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Action <span class="caret"></span></button>
                                                     <ul class="dropdown-menu">
                                                         <li><a id="updateFunc" href="javascript:void(0)" data-toggle="modal" data-id="<?= $item['id'] ?>"  data-task="<?= $item['task'] ?>" data-progress="<?= $item['progress'] ?>"data-statusid="<?= $item['statusid'] ?>"data-target="#baseModal" class="openModal">Update</a></li>
-                                                        <li><a href="javascript:void(0)" data-id="<?= $item['id'] ?>"  data-task="<?= $item['task'] ?>" data-progress="100"data-statusid="2" onclick="done(this)">Done</a></li>
+                                                        <li><a href="javascript:void(0)" data-id="<?= $item['id'] ?>"  data-task="<?= $item['task'] ?>" data-progress="90"data-statusid="2" onclick="done(this)">Done</a></li>
                                                     </ul>
                                                 </div></td>
                                         <?php

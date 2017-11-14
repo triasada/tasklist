@@ -49,14 +49,17 @@ class Tasklist extends Backend{
         $data = filter_input_array(INPUT_POST);
         $role = implode('|', $data['resource']);
         $data['resource']=$role;
-        $data['createdby']=$this->id;
+        $data['createdby']=intval($this->id);
         if (isset($id)){
             $data['id']=$id;
         }
+		
         $result = (isset($id)) ? $this->model->edit($data) : $this->model->add($data);
+		
         $success = ($result === 1) ? true : false;
         $msg = ($result === 1) ? 'success' : 'failed';
         echo json_encode(array('success' => $success, 'msg' => $msg));
+		
 //        var_dump($data);
     }
     

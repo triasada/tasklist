@@ -10,7 +10,7 @@
 */
 
 class Task_Model extends Model {
-    protected $table ='taskhistory';
+    protected $table ='taskHistory';
     public function __construct() {
         parent::__construct();
     }

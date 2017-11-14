@@ -5130,7 +5130,7 @@ button.close {
   transform: translate(-50%, -50%);
   z-index: 1050;
   display: none;
-  overflow: auto;
+  /* overflow: auto; */
   /*overflow-y: scroll;*/
   -webkit-overflow-scrolling: touch;
   outline: 0;
