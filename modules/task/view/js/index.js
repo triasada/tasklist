@@ -50,6 +50,7 @@ function updateHistory(data) {
     }
 
     $('#baseModalLabel').html('Update Of Task ' + data.task);
+    $('#baseModal').removeClass('history').removeClass('updateHistory');
     $('#baseModal').addClass('updateHistory');
     var modal = $('#baseModal .modal-body');
     var footer = $('#baseModal .modal-footer');
@@ -61,7 +62,7 @@ function updateHistory(data) {
     $form.append("<input type='hidden' name='taskid' value ='" + data.taskid + "'/>");
     $form.append("<input type='hidden' name= statusid value ='" + statustask + "'/>");
     $form.append("<div class='form-group input-group input-group'><span class='input-group-addon' style='width: 100px'>Progress</span><input type='text' name='progress' value ='" + data.progress + "'/></div>");
-    $form.append("<div class='form-group input-group input-group'><span class='input-group-addon' style='width: 100px'>Notes</span><input type='text' name='notes' value =''/></div>");
+    $form.append("<div class='form-group input-group input-group'><span class='input-group-addon' style='width: 100px'>Notes</span><textarea class='form-control' rows='3' name='notes'></textarea></div>");
     footer.append("<button  type='button' class='btn btn-success' onclick='updater()' data-dismiss='modal'>Submit</button>")
     console.log(data);
 }

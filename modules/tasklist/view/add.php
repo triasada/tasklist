@@ -37,7 +37,7 @@
                             </div>
                             <div id="task" class="form-group input-group input-group">
                                 <span class="input-group-addon" style="width: 100px">Task</span>
-                                <input class="form-control" name='task' value=""/>
+                                <textarea class="form-control" rows="3" name="task"></textarea>
                                 <p class="help-block"></p>
                             </div>
                             <div class="row">

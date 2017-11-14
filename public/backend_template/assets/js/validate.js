@@ -99,6 +99,7 @@ jQuery.fn.extend({
     }
 });
 function showHistory(data){
+    $('#baseModal').removeClass('history').removeClass('updateHistory');
     $('#baseModal').addClass('history');
     $('#baseModal .modal-header').removeClass('modal-header-info').addClass('modal-header-info');
     $('#baseModal .modal-footer').removeClass('modal-footer-info').addClass('modal-footer-info')
