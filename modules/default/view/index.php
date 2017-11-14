@@ -22,11 +22,13 @@
 <div id="polina">
     
     <br><br><br>
+    <div class="main_chart_ict">
     <div class="row"> 
         <div class="panel-body" id="morris" style="display: none;">
-            <h1 class="text-center  text-front-end" style="font-weight:bolder">ICT-TASK</h1>
+            <h1 class="text-center  text-front-end" style="font-weight:bolder">ICT-Dev</h1>
             <div id="morris-donut-chart"></div>
         </div>
+    </div>
     </div>
     
 </div>
