@@ -43,7 +43,7 @@ h1.text-front-end{
 }
 .modal-content-login{
     position: relative;
-    background-color:rgba(255, 255, 255, .3);
+    background-color:rgba(255, 255, 255, .7);
     background-clip: padding-box;
     border: 1px solid #999;
     border: 1px solid rgba(0, 0, 0, .2);
