@@ -10,6 +10,7 @@
 <script src="<?php echo BACKEND_TEMPLATE; ?>assets/js/validate.js"></script>
 <script src="<?php echo BACKEND_TEMPLATE; ?>assets/js/tablemodif.js"></script>
 <script>
+    var url_home ='<?php echo URL?>';
     var home ='<?php echo URL.$this->activeMenu?>/';
     $( document ).ready(function() {
         var a= "<?php echo $this->activeMenu?>";
