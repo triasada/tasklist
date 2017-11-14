@@ -44,7 +44,7 @@ class Userprofile extends Backend {
     public function changePass() {
         $this->view->js = array('js/editPass.js');
         $this->view->title = "Edit Pass";
-        $data = $this->model->getUser($this->$id);
+        $data = $this->model->getUser($this->id);
         $this->view->userData = $data[0];
         $this->rendering('editPass');
     }
