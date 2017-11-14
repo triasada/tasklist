@@ -8,11 +8,7 @@ class Login extends Controller {
     
     function index() 
     {    
-        $this->view->title = 'Login';
-        
-        $this->view->render('header');
-        $this->view->renderModule('login','index');
-        $this->view->render('footer');
+         header('location:'.URL);
     }
     
     function run()
