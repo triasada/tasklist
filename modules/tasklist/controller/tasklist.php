@@ -45,6 +45,12 @@ class Tasklist extends Backend{
         parent::add();
         
     }
+    public function edit($id) {
+        $this->view->project = $this->project_model->get();
+        $this->view->resource = $this->user_model->getBelow($this->id);
+        parent::edit($id);
+        
+    }
      public function save($id) {
         $data = filter_input_array(INPUT_POST);
         $role = implode('|', $data['resource']);

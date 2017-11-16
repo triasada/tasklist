@@ -20,13 +20,14 @@ class tasklist_Model extends Model {
         if (isset($id)) {
             $customQuery = " where id = $id";
         }
-        $query1 = "select * from tasklist " . $customQuery ."order by created desc";
+        $query1 = "select * from tasklist " . $customQuery ." order by created desc";
         $result1= $this->db->select($query1);
         foreach ($result1 as $key => $value) {
             $query2 = "select * from v_task where id = $value[id] order by lastupdate desc limit 1  ";
             $result2= $this->db->select($query2);
             $result1[$key]=$result2[0];
         }
+       
         return $result1;
     }
     public function getHistory($id) {
