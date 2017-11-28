@@ -61,6 +61,8 @@
                                             ?>
                                             <td><a id="updateFunc" href="javascript:void(0)" data-toggle="modal" data-id="<?= $item['id'] ?>"  data-task="<?= $item['task'] ?>" data-progress="<?= $item['progress'] ?>"data-statusid="<?= $item['statusid'] ?>"data-target="#baseModal" class="openModal btn btn-primary">Update</a></td>
                                             <?php
+                                            }else{
+                                                echo "<td></td>";
                                             }
                                             break;
                                         case 1:
@@ -74,6 +76,8 @@
                                                     </ul>
                                                 </div></td>
                                         <?php
+                                            }else{
+                                                echo "<td></td>";
                                             }
                                             break;
                                         case 2:
@@ -87,6 +91,8 @@
                                                     </ul>
                                                 </div></td>
                                             <?php
+                                            }else{
+                                                echo "<td></td>";
                                             }
                                             break;
                                         case 3:
@@ -94,6 +100,8 @@
                                             ?>
                                               <td><a id="updateFunc" href="javascript:void(0)" data-toggle="modal" data-id="<?= $item['id'] ?>"  data-task="<?= $item['task'] ?>" data-progress="<?= $item['progress'] ?>"data-statusid="<?= $item['statusid'] ?>"data-target="#baseModal" class="openModal btn btn-primary">Update</a></td>
                                             <?php
+                                            }else{
+                                                echo "<td></td>";
                                             }
                                         break;
                                         case 4:
