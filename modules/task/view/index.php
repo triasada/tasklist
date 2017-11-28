@@ -97,6 +97,7 @@
                                             }
                                         break;
                                         case 4:
+                                            echo "<td></td>";
                                             break;
                                         
                                     }
