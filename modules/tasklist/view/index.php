@@ -64,7 +64,9 @@
 
                                             </ul>
                                         </div></td>
-                                    <?php }?>
+                                    <?php }else{
+                                        echo "<td></td>";
+                                    }?>
 
                                 </tr>
                                 <?php $i++;

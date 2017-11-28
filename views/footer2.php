@@ -20,7 +20,9 @@
        $('body').find('li').has('ul.collapse.in').addClass('active');
        var b=$('li').has('a.active-menu').removeClass('selected').addClass('selected');
         $('li').has('ul').removeClass('selected');
-    console.log(b);
+    
+//    $('input[type="checkbox"]').change(checkboxChanged);
+//    console.log(b);
     });
 </script>
 
@@ -29,9 +31,16 @@
 
 <script src="<?php echo BACKEND_TEMPLATE; ?>assets/js/bootstrap.min.js"></script>
 <script src="<?php echo BACKEND_TEMPLATE; ?>assets/js/jquery.metisMenu.js"></script>
+<script src="<?php echo BACKEND_TEMPLATE; ?>assets/js/dataTables/jquery.dataTables.js"></script>
+<script src="<?php echo BACKEND_TEMPLATE; ?>assets/js/dataTables/dataTables.bootstrap.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#tasktable').dataTable();
+    });
+</script>
+<script src="<?php echo BACKEND_TEMPLATE; ?>assets/js/custom.js"></script>
 <!--<script src="<?php echo BACKEND_TEMPLATE; ?>assets/js/morris/raphael-2.1.0.min.js"></script>-->
 <!--<script src="<?php echo BACKEND_TEMPLATE; ?>assets/js/morris/morris.js"></script>-->
-<script src="<?php echo BACKEND_TEMPLATE; ?>assets/js/custom.js"></script>
 
 <?php 
     if (isset($this->js)) 
