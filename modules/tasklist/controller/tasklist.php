@@ -41,7 +41,7 @@ class Tasklist extends Backend{
     }
     public function add() {
         $this->view->project = $this->project_model->get();
-        $this->view->resource = $this->user_model->getBelow($this->id);
+        $this->view->resource = $this->user_model->getBelow1($this->id);
         parent::add();
         
     }
