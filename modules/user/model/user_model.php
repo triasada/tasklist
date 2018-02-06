@@ -43,16 +43,16 @@ class User_Model extends Model {
         
     }
     public function getBelow($data) {
-        $user = $this->db->select("select groupid from users where id= $data ");
+//        $user = $this->db->select("select groupid from users where id= $data ");
         
-        $group = $this->db->select("select id,parent from groupStaff where parent = ".$user[0]['groupid']);
-        foreach ($group as $value) {
-            
-            $groupchild = $this->db->select("select id,parent from groupStaff where parent = ".$value['id']);
+//        $group = $this->db->select("select id,parent from groupStaff where parent = ".$user[0]['groupid']);
+//        foreach ($group as $value) {
+            $group = [];
+            $groupchild = $this->db->select("select id,parent from groupStaff ");
             foreach ($groupchild as $valuegc) {
                 array_push($group, $valuegc);
                 
-            }
+//            }
         }
         
         $result= [];
