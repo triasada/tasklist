@@ -16,6 +16,7 @@ class Backend extends Controller{
         parent::__construct();
         Auth::handleLogin();
         $this->id = $_SESSION['userid'];
+        $this->groupstaff = $_SESSION['groupstaff'];
 //        @session_start();
         $this->view->nameuser=$_SESSION['userProfileName'];
         $this->loadModel('backend');
@@ -23,8 +24,8 @@ class Backend extends Controller{
         $this->view->companyLogo = $data[3]['description'];
         $this->view->companyName = $data[0]['description'];
         $this->pageId = $this->model->getPage($this->module_name)[0]['id'];
-        $this->view->Navbar = $this->model->getMenu($this->id);
-        if (!$this->model->is_privileged($this->id, $this->pageId)) {
+        $this->view->Navbar = $this->model->getMenu($this->groupstaff);
+        if (!$this->model->is_privileged($this->groupstaff, $this->pageId)) {
             session_destroy();
             header('location:'.URL.'login');
         }

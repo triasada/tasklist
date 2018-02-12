@@ -28,8 +28,8 @@ function loginIn() {
 //    $('#baseModalLabel').empty().append('Login');
     body.append("<form role='form'  id='loginForm' action='login/login/run' method='POST'></form>");
     var $form = body.has('form').children('form');
-    $form.append(" <div id='login' class='form-group input-group input-group'><span class='input-group-addon' style='width: 100px'>Username</span><input class='form-control' name='login'  value =''/></div>");
-    $form.append("<div id='password' class='form-group input-group input-group'><span class='input-group-addon' style='width: 100px'>Password</span><input class='form-control' type='password' name='password' value =''/></div>");
+    $form.append(" <div id='login' class='form-group input-group input-group'><span class='input-group-addon' >Username</span><input class='form-control' name='login'  value =''/></div>");
+    $form.append("<div id='password' class='form-group input-group input-group'><span class='input-group-addon' >Password</span><input class='form-control' type='password' name='password' value =''/></div>");
     footer.append("<button  type='submit' class='btn btn-warning' onclick='kirim()' >Submit</button>")
     $("#loginForm input").keyup(function (e) {
         if (e.keyCode == 13)

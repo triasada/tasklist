@@ -25,13 +25,7 @@ class Backend_Model extends Model
         return $data;
     }
     public function getMenu($id) {
-
-
-        $strquery = "SELECT groupid FROM user WHERE id = '$id'";
-        $query = $this->db->select($strquery);
-        $idgroup = $query[0]['groupid'];
-
-        $strquery1 = "SELECT role FROM groupStaff WHERE id = '$idgroup'";
+        $strquery1 = "SELECT role FROM groupStaff WHERE id = '$id'";
         $query1 = $this->db->select($strquery1);
 
         $role = explode('|', $query1[0]['role']);
@@ -50,11 +44,7 @@ class Backend_Model extends Model
     public function is_privileged($id, $page_id) {
 
         if ($page_id > 0) {
-            $strquery = "SELECT groupid FROM user WHERE id = '$id'";
-            $query = $this->db->select($strquery);
-            $idgroup = $query[0]['groupid'];
-
-            $strquery1 = "SELECT role FROM groupStaff WHERE id = '$idgroup'";
+            $strquery1 = "SELECT role FROM groupStaff WHERE id = '$id'";
             $query1 = $this->db->select($strquery1);
 
             $role = explode('|', $query1[0]['role']);
