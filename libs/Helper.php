@@ -19,17 +19,21 @@ class Helper {
     
     public function jobIdHelper($job){
         switch ($job) {
-            case "MGR":
+            case "APPLICATION DEVELOPMENT MGR":
                 $groupstaff = 2;
                 break;
-            case "STAFF":
+            case "APPLICATION DEVELOPMENT STAFF":
                 $groupstaff = 3;
                 break;
-            case "DEV":
+            case "OUTSOURCE DEV":
                 $groupstaff = 4;
+                break;
+            case "APPLICATION SUPPORT STAFF":
+                $groupstaff = 5;
                 break;
 
             default:
+                 $groupstaff = 0;
                 break;
         }
         

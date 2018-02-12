@@ -22,19 +22,21 @@ function loginIn() {
     header.removeClass('modal-header-primary').addClass('modal-header-primary');
     header.has('h4').children('h4').attr('align', 'center');
     header.has('h4').children('h4').empty().append("<img height='60px' src='public/img/jict.png'/>");
+    header.append(" <div id='splash' class='alert ' hidden><span class='glyphicon' > </span></div>");
     footer.empty();
     footer.addClass('modal-footer-primary');
     body.empty();
 //    $('#baseModalLabel').empty().append('Login');
     body.append("<form role='form'  id='loginForm' action='login/login/run' method='POST'></form>");
     var $form = body.has('form').children('form');
+     
     $form.append(" <div id='login' class='form-group input-group input-group'><span class='input-group-addon' >Username</span><input class='form-control' name='login'  value =''/></div>");
     $form.append("<div id='password' class='form-group input-group input-group'><span class='input-group-addon' >Password</span><input class='form-control' type='password' name='password' value =''/></div>");
     footer.append("<button  type='submit' class='btn btn-warning' onclick='kirim()' >Submit</button>")
     $("#loginForm input").keyup(function (e) {
         if (e.keyCode == 13)
         {
-           kirim()
+            kirim()
         }
     });
 
@@ -54,8 +56,30 @@ function kirim() {
     });
 //    console.log(a);
     if (a) {
-        $('#baseModal').modal('hide');
-        $("#loginForm").submit();
+        $.ajax({
+            url: "login/login/run",
+            type: "POST",
+            data: $('#loginForm').serialize(),
+            success: function (msg) {
+            if (msg ==='Login Succesfull'){
+                redirect('dashboard');
+            }else{
+               splash('glyphicon glyphicon-remove', 'alert alert-danger', msg);
+            }
+            }
+        });
+//        $('#baseModal').modal('hide');
+//        $("#loginForm").submit();
 
     }
+}
+function splash(spanClass,divClass,msg){
+    
+    $('#splash span').addClass(spanClass).html(msg);
+    $('#splash').addClass(divClass).show().delay(8000).fadeOut(400);
+}
+function redirect(url){
+ setTimeout(function() {
+  window.location = url ;
+}, 200);   
 }

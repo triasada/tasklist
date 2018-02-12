@@ -41,8 +41,6 @@
 											  <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><img height="20px"  src="<?php echo BACKEND_TEMPLATE; ?>assets/img/find_user.png" class="img-circle" />
                                                                                               <?php echo $this->nameuser ?> <span class="caret"></span></button>
 											  <ul class="dropdown-menu dropdown-menu-right">
-												<li><a href="<?=URL?>userprofile/userprofile/edit">Profile</a></li>
-                                                                                                <li><a href="<?=URL?>userprofile/userprofile/changePass" >Change Password</a></li>
 												<li class="divider"></li>
                                                                                                 <li><a href="javascript:void(0)" onclick="if(confirm('Sure go Out?')){ window.location.href='<?= URL ?>dashboard/dashboard/logout'}">Logout</a></li>
 											  </ul>

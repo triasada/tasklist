@@ -20,35 +20,36 @@ class Login_Model extends Model {
         $pass = filter_input(INPUT_POST, 'password');
         $ora = new OracleDatabase();
         $data = $ora->get_userhris($id);
-//        var_dump($data[0]->EMP_CARD);exit();
         if ($data[0]->EMP_CARD !== NULL) {
+            $job = $data[0]->ORG_NAME . " " . $data[0]->JOB_ID;
             $match = $ora->get_pass($id, $pass);
             if ($match[0][0] === "BENAR") {
                 Session::init();
-                Session::set('groupstaff', $helper->jobIdHelper($data[0]->JOB_ID));
-                Session::set('role', $helper->jobIdHelper($data[0]->JOB_ID));
+                Session::set('groupstaff', $helper->jobIdHelper($job));
+                Session::set('role', $helper->jobIdHelper($job));
                 Session::set('loggedIn', true);
                 Session::set('userid', $data[0]->EMP_CARD);
                 Session::set('userProfileName', $data[0]->INTERNAL_DISPLAY_NAME);
 //                var_dump($_SESSION);exit();
-                header('location:' . URL . 'dashboard');
+                echo "Login Succesfull";
             } else {
-                $msg = 'wrong_password';
-                header('location:' . URL . 'login/' . $msg);
+                $msg = 'wrong password';
+                echo $msg;
+//                header('location:' . URL . 'login/' . $msg);
             }
-        } elseif($id=='admin' && $pass== 'admin'){
-             Session::init();
-                Session::set('groupstaff', 1);
-                Session::set('role', 1);
-                Session::set('loggedIn', true);
-                Session::set('userid', 1);
-                Session::set('userProfileName', 'Super Admin');
+        } elseif ($id == 'admin' && $pass == 'admin') {
+            Session::init();
+            Session::set('groupstaff', 1);
+            Session::set('role', 1);
+            Session::set('loggedIn', true);
+            Session::set('userid', 1);
+            Session::set('userProfileName', 'Super Admin');
 //                var_dump($_SESSION);exit();
-                header('location:' . URL . 'dashboard');
-        
-        }else {
-            $msg = 'user_not_found';
-            header('location:' . URL . 'login/' . $msg);
+            echo "Login Succesfull";
+        } else {
+            $msg = 'user not found';
+            echo $msg;
+//            header('location:' . URL . 'login/' . $msg);
         }
     }
 
