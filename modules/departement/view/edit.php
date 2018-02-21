@@ -22,16 +22,12 @@
 
                         <form role="form" id="dataForm"  action="<?= URL . $this->activeMenu ?>/<?= $this->activeMenu ?>/save/<?= $this->data['data']['id'] ?>">
                             <div class="form-group input-group input-group">
-                                <span class="input-group-addon" style="width: 100px">Project Name</span>
-                                <input class="form-control" name='project' value="<?= $this->data['data']['project'] ?>"/>
-                                <p class="help-block"></p>
-                            </div>
-                            <div class="form-group input-group input-group">
-                                <span class="input-group-addon" style="width: 100px">Description</span>
-                                <input class="form-control" name='descript' value="<?= $this->data['data']['descript'] ?>"/>
+                                <span class="input-group-addon" style="width: 100px">Departement</span>
+                                <input class="form-control" name='page' value="<?= $this->data['data']['departement'] ?>"/>
                                 <p class="help-block"></p>
                             </div>
                             
+
 
                             <button  type="button" class="btn btn-success" onclick="edit()" >Submit</button>
                             <button type="reset" class="btn btn-primary">Reset</button>

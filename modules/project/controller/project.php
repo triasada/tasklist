@@ -16,4 +16,13 @@ class Project extends Backend{
         parent::__construct();
     }
     
+    public function range($id){
+        $this->view->js = array('js/range.js');
+        $this->view->title = "Add Range ".$this->module_name;
+        $data = $this->model->get($id);
+        $result['data'] = $data[0];
+        $this->view->data = $result;
+        $this->rendering('range');
+    }
+    
 }
