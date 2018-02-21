@@ -21,10 +21,12 @@
                     <div class="col-md-6">
 
                         <form role="form" id="dataForm"  action="<?= URL . $this->activeMenu ?>/<?= $this->activeMenu ?>/save/<?= $this->data['data']['id'] ?>">
-                            <div id="page" class="form-group input-group input-group">
-                                <span class="input-group-addon" style="width: 100px">Departement</span>
+                            <div class="form-group row">
+                                <label  class="col-md-2 control-label">Departement</label>
+                                <div class="col-sm-10" >
                                 <input class="form-control" name='departement' value=""/>
                                 <p class="help-block"></p>
+                                </div>
                             </div>
                             
 

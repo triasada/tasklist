@@ -14,10 +14,7 @@
                 <div class="col-md-12">
                     <!-- Advanced Tables -->
                     <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <a class="glyphicon glyphicon-plus btn btn-success" href="<?=URL.$this->activeMenu?>/<?=$this->activeMenu?>/add/">Add</a>
-                           
-                        </div>
+                        
                         <div class="panel-body">
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
