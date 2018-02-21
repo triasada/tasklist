@@ -21,15 +21,19 @@
                     <div class="col-md-6">
 
                         <form role="form" id="dataForm"  action="<?= URL . $this->activeMenu ?>/<?= $this->activeMenu ?>/save/<?= $this->data['data']['id'] ?>">
-                            <div id="project" class="form-group input-group input-group">
-                                <span class="input-group-addon" style="width: 100px">Project Name</span>
+                            <div class="form-group row">
+                                <label  class="col-md-2 control-label">Project Name</label>
+                                <div class="col-sm-10" >
                                 <input class="form-control" name='project' value=""/>
                                 <p class="help-block"></p>
+                                </div>
                             </div>
-                            <div id="descript" class="form-group input-group input-group">
-                                <span class="input-group-addon" style="width: 100px">Description</span>
+                            <div class="form-group row">
+                                <label  for="descript" class="col-sm-2 col-form-label">Description</label>
+                                <div class="col-sm-10" >
                                 <input class="form-control" name='descript' value=""/>
                                 <p class="help-block"></p>
+                                </div>
                             </div>
                             
                             <button  type="button" class="btn btn-success" onclick="add()" >Submit</button>

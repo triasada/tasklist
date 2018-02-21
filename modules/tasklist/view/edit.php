@@ -21,8 +21,9 @@
                     <div class="col-md-6">
 
                         <form role="form" id="dataForm"  action="<?= URL . $this->activeMenu ?>/<?= $this->activeMenu ?>/save/<?= $this->data['data']['id'] ?>">
-                            <div class="form-group input-group input-group">
-                                <span class="input-group-addon" style="width: 100px">Project</span>
+                           <div class="form-group row">
+                                <label class="col-md-2 control-label" style="width: 100px">Project</label>
+                                 <div class="col-sm-10" >
                                 <select class="form-control" name='project' >
                                     <?php
                                     foreach ($this->project as $group) {
@@ -35,11 +36,14 @@
                                     ?>
 
                                 </select>
+                                 </div>
                             </div>
-                            <div id="task" class="form-group input-group input-group">
-                                <span class="input-group-addon" style="width: 100px">Task</span>
+                            <div id="task" class="form-group row">
+                                <label class="col-md-2 control-label" style="width: 100px">Task</label>
+                                <div class="col-sm-10" >
                                 <textarea class="form-control" rows="3" name="task" ><?=$this->data['data']['task']?></textarea>
                                 <p class="help-block"></p>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6 col-sm-6">
