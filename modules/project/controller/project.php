@@ -14,6 +14,7 @@ class Project extends Backend{
     protected $_title='Manage Project';
             function __construct() {
         parent::__construct();
+        $this->loadCustomModel('departement', 'departement');
     }
     
     public function range($id){
@@ -23,6 +24,14 @@ class Project extends Backend{
         $result['data'] = $data[0];
         $this->view->data = $result;
         $this->rendering('range');
+    }
+    public function add() {
+        $this->view->parent = $this->departement_model->get();
+        parent::add();
+    }
+    public function edit($id) {
+        $this->view->parent = $this->departement_model->get();
+        parent::edit($id);
     }
     
 }

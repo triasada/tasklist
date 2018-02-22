@@ -36,7 +36,24 @@
                                 </div>
                             </div>
                             
+                            <div class="form-group row">
+                                <label  for="descript" class="col-sm-2 col-form-label">Description</label>
+                                <div class="col-sm-10" >
+                                <select class="form-control" name='departement' >
+                                    
+                                    <?php
+                                    foreach ($this->parent as $group) {
+                                        $selected = ($group['id'] == $this->data['data']['departement_id']) ? 'selected' : '';
+                                        ?>
 
+                                        <option value="<?= $group['id'] ?>" <?= $selected ?>><?= $group['departement'] ?></option>
+                                        <?php
+                                    }
+                                    ?>
+
+                                </select>
+                                </div>
+                            </div>
                             <button  type="button" class="btn btn-success" onclick="edit()" >Submit</button>
                             <button type="reset" class="btn btn-primary">Reset</button>
 

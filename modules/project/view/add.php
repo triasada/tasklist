@@ -35,6 +35,22 @@
                                 <p class="help-block"></p>
                                 </div>
                             </div>
+                            <div class="form-group row">
+                                <label  for="descript" class="col-sm-2 col-form-label">Dept</label>
+                                <div class="col-sm-10" >
+                                <select class="form-control" name='departement' >
+                                    <?php
+                                    foreach ($this->parent as $group) {
+                                        ?>
+
+                                        <option value="<?= $group['id'] ?>" ><?= $group['departement'] ?></option>
+    <?php
+}
+?>
+
+                                </select>
+                                </div>
+                            </div>
                             
                             <button  type="button" class="btn btn-success" onclick="add()" >Submit</button>
                             <button type="reset" class="btn btn-primary">Reset</button>
