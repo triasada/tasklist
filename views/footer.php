@@ -34,11 +34,11 @@
         
         break;
 }
-                       $('#isikiri').append("<h5 class='"+colorijo+"'>"+newdata[i].project+"  ("+newdata[i].taskall+" task)</h4>");
+                       
                        var percent = Math.round(100*newdata[i].taskdone/newdata[i].taskall)
                        if (!percent){percent = 0}
-                        $('#isikiri').append(" <div class='progress'><div class='progress-bar progress-bar-success' role='progressbar' aria-valuenow='"+percent+"' aria-valuemin='0' aria-valuemax='100' style='width:"+percent+"%'>\n\
-    <span >"+percent+"% Complete</span> </div></div>");
+                        $('#isikiri').append(" <div class='container'><div class='row'> <label  class='col-sm-5 col-form-label "+colorijo+"'>"+newdata[i].project+"  ("+newdata[i].taskall+" task)</label><div class='progress '><div class='progress-bar progress-bar-success ' role='progressbar' aria-valuenow='"+percent+"' aria-valuemin='0' aria-valuemax='100' style='width:"+percent+"%'>\n\
+    <span >"+percent+"% Complete</span> </div></div></div></div>");
                         console.log(data.data);
                     }
 
