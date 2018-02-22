@@ -27,4 +27,11 @@ class Data extends Controller {
         echo json_encode(array('success'=>true,'data'=>$dataall));  
     }
     
+    public function getProject() {
+         $data = $this->model->getProject();
+//         var_dump($data);         exit();
+          echo json_encode(array('success'=>true,'data'=>$data));  
+        
+    }
+    
 }
