@@ -20,7 +20,10 @@ class tasklist_Model extends Model {
         if (isset($id)) {
             $customQuery = " where id = $id";
         }
-        $query1 = "select * from tasklist " . $customQuery ." order by created desc";
+        $query1 = "select a.* , b.priority_id ,c.priority
+from tasklist a 
+join project b on a.project=b.id 
+join priority c on b.priority_id=c.id  " . $customQuery ." order by priority_id desc, created desc";
         $result1= $this->db->select($query1);
         foreach ($result1 as $key => $value) {
             $query2 = "select * from v_task where id = $value[id] order by lastupdate desc limit 1  ";

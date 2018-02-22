@@ -22,6 +22,7 @@
                     <table class="table table-striped table-bordered table-hover" id="tasktable">
                         <thead>
                             <tr>
+                                <th>Priority</th>
                                 <th>Details</th>
                                 <th>No</th>
                                 <th>Project Name</th>
@@ -44,6 +45,7 @@
                             foreach ($this->data['data'] as $item) {
                                 ?>
                                 <tr class="odd gradeX">
+                                    <td><?= $item['priority'] ?></td>
                                     <td><a id="historyFunc" href="javascript:void(0)" data-toggle="modal" data-id="<?= $item['id'] ?>"  data-target="#baseModal" class="openModal">+</a></td>
                                     <td><?= $i ?></td>
                                     <td><?= $item['projectname'] ?></td>
