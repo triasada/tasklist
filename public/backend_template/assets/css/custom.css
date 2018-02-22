@@ -2,8 +2,18 @@
 body {
     font-family: 'Open Sans', sans-serif;
 }
-
-.modal {
+.modal-login {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  display: none;
+  overflow: hidden;
+  /*overflow-y: scroll;*/
+}
+.modal.history {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -11,7 +21,20 @@ body {
   transform: translate(-50%, -50%);
   z-index: 1050;
   display: none;
-  overflow: hidden;
+/*  overflow: auto;*/
+  /*overflow-y: scroll;*/
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.modal.updateHistory {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  transform: translate(-50%, -50%);
+  z-index: 1050;
+  display: none;
+  /* overflow: auto; */
   /*overflow-y: scroll;*/
   -webkit-overflow-scrolling: touch;
   outline: 0;
@@ -65,8 +88,8 @@ body {
   position: relative;
   padding: 20px;
   height: 150px;
-  /*overflow-y: auto;*/
-  /*overflow: auto;*/
+  overflow-y: auto;
+  overflow: auto;
   
 }
 

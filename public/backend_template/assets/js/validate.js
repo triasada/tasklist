@@ -96,6 +96,24 @@ jQuery.fn.extend({
                             </div>";
         return $(this).append(dialog);
 
+    },
+    modalLoginLoad: function () {
+        var dialog = "<div class='modal-login fade modal' id='baseModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>\n\
+\n\<div class='modal-content'>\n\
+                                        <div class='modal-header'>\n\
+                                            <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>\n\
+                                            <h4 class='modal-title' id='baseModalLabel'></h4>\n\
+                                        </div>\n\
+                                        <div class='modal-body'>\n\
+                                           \n\
+                                        </div>\n\
+                                        <div class='modal-footer'>\n\
+                                            <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>\n\
+                                        </div>\n\
+                                    </div>\n\
+                            </div>";
+        return $(this).append(dialog);
+
     }
 });
 function showHistory(data){
