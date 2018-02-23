@@ -39,7 +39,7 @@
                             <div class="form-group row">
                                 <label  for="descript" class="col-sm-2 col-form-label">Description</label>
                                 <div class="col-sm-10" >
-                                <select class="form-control" name='departement' >
+                                <select class="form-control" name='departement_id' >
                                     
                                     <?php
                                     foreach ($this->parent as $group) {
