@@ -41,11 +41,11 @@ class Database extends PDO {
 
         foreach ($data as $key => $value) {
             if ($key=='createdby'){
-                if (strlen((string)$value)=3){
+                if (strlen((string)$value)==3){
                     $sth->bindValue(":$key", '0'.$value);
-                }elseif (strlen((string)$value)=2) {
+                }elseif (strlen((string)$value)==2) {
                     $sth->bindValue(":$key", '00'.$value);
-                }elseif (strlen((string)$value)=1) {
+                }elseif (strlen((string)$value)==1) {
                     $sth->bindValue(":$key", '000'.$value);
                 } else {
                     $sth->bindValue(":$key", $value);
@@ -79,11 +79,11 @@ class Database extends PDO {
 
         foreach ($data as $key => $value) {
             if ($key=='createdby'){
-                if (strlen((string)$value)=3){
+                if (strlen((string)$value)==3){
                     $sth->bindValue(":$key", '0'.$value);
-                }elseif (strlen((string)$value)=2) {
+                }elseif (strlen((string)$value)==2) {
                     $sth->bindValue(":$key", '00'.$value);
-                }elseif (strlen((string)$value)=1) {
+                }elseif (strlen((string)$value)==1) {
                     $sth->bindValue(":$key", '000'.$value);
                 } else {
                     $sth->bindValue(":$key", $value);
