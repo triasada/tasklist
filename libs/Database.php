@@ -40,7 +40,19 @@ class Database extends PDO {
         $sth = $this->prepare("INSERT INTO $table (`$fieldNames`) VALUES ($fieldValues)");
 
         foreach ($data as $key => $value) {
+            if ($key=='createdby'){
+                if (strlen((string)$value)=3){
+                    $sth->bindValue(":$key", '0'.$value);
+                }elseif (strlen((string)$value)=2) {
+                    $sth->bindValue(":$key", '00'.$value);
+                }elseif (strlen((string)$value)=1) {
+                    $sth->bindValue(":$key", '000'.$value);
+                } else {
+                    $sth->bindValue(":$key", $value);
+                }
+            }else{
             $sth->bindValue(":$key", $value);
+            }
         }
 
         $sth->execute();
@@ -66,7 +78,19 @@ class Database extends PDO {
         $sth = $this->prepare($query);
 
         foreach ($data as $key => $value) {
+            if ($key=='createdby'){
+                if (strlen((string)$value)=3){
+                    $sth->bindValue(":$key", '0'.$value);
+                }elseif (strlen((string)$value)=2) {
+                    $sth->bindValue(":$key", '00'.$value);
+                }elseif (strlen((string)$value)=1) {
+                    $sth->bindValue(":$key", '000'.$value);
+                } else {
+                    $sth->bindValue(":$key", $value);
+                }
+            }else{
             $sth->bindValue(":$key", $value);
+            }
         }
         $sth->execute();
         return ($sth->rowCount());
