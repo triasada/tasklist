@@ -28,7 +28,7 @@ class Login_Model extends Model {
                 Session::set('groupstaff', $helper->jobIdHelper($job));
                 Session::set('role', $helper->jobIdHelper($job));
                 Session::set('loggedIn', true);
-                Session::set('userid', (string)$data[0]->EMP_CARD);
+                Session::set('userid', $id);
                 Session::set('userProfileName', $data[0]->INTERNAL_DISPLAY_NAME);
 //                var_dump($_SESSION);exit();
                 echo "Login Succesfull";
