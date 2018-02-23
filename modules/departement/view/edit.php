@@ -24,7 +24,7 @@
                             <div class="form-group row">
                                 <label  class="col-md-2 control-label">Departement</label>
                                 <div class="col-sm-10" >
-                                <input class="form-control" name='page' value="<?= $this->data['data']['departement'] ?>"/>
+                                <input class="form-control" name='departement' value="<?= $this->data['data']['departement'] ?>"/>
                                 <p class="help-block"></p>
                                 </div>
                             </div>

@@ -15,16 +15,7 @@ class Departement extends Backend{
             function __construct() {
         parent::__construct();
     }
-    public function edit($id) {
-       
-        parent::edit($id);
-    }
-
-    public function add() {
-        
-        parent::add();
-    }
-    
+   
     
     
 }
